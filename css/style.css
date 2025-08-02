@@ -1,0 +1,215 @@
+
+
+/* css/style.css */
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fefefe;
+  color: #333;
+}
+
+/* =============================
+      SECCIÓN BIENVENIDA
+============================= */
+.bienvenida {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background: url('../assets/img/fondo.jpg') no-repeat center center/cover;
+}
+
+.bienvenida .contenedor {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.bienvenida h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.bienvenida p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#btnEntrar {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #b48b6d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* =============================
+      CUENTA REGRESIVA
+============================= */
+/* Cuenta regresiva */
+.cuenta-regresiva {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #fff7f0;
+}
+
+.cuenta-regresiva h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.reloj {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.reloj div {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  min-width: 60px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.reloj span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+}
+
+.reloj small {
+  font-size: 0.75rem;
+  color: #555;
+}
+/* =============================
+     MENSAJE INICIAL
+============================= */
+
+.mensaje-inicial {
+  padding: 2.5rem 1rem;
+  background-color: #fdf6f0;
+  text-align: center;
+}
+
+.mensaje-inicial p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+  font-style: italic;
+  white-space: pre-line;
+}
+
+/* =============================
+    CARDS CEREMONIA -CELEBRACIÓN
+============================= */
+
+.evento-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background: #fff;
+}
+
+.card {
+  background: #fef7f1;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #a46c5c;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+.boton {
+  display: inline-block;
+  margin: 0.5rem auto;
+  padding: 0.6rem 1.2rem;
+  background: #d08060;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.boton:hover {
+  background: #b5684e;
+}
+
+
+/* =============================
+      RESPONSIVE
+============================= */
+
+@media (min-width: 768px) {
+  .bienvenida h1 {
+    font-size: 3rem;
+  }
+
+  .bienvenida p {
+    font-size: 1.5rem;
+  }
+
+  #btnEntrar {
+    font-size: 1.2rem;
+  }
+
+   .cuenta-regresiva h2 {
+    font-size: 2rem;
+  }
+
+  .reloj div {
+    min-width: 80px;
+    padding: 1.2rem;
+  }
+
+  .reloj span {
+    font-size: 2rem;
+  }
+
+  .reloj small {
+    font-size: 0.9rem;
+  }
+
+    .mensaje-inicial p {
+    font-size: 1.25rem;
+  }
+
+  .evento-cards {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .card {
+    width: 45%;
+  }
+}

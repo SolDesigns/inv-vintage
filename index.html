@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación Digital</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Pantalla de bienvenida -->
+    <section class="bienvenida">
+      <div class="contenedor">
+        <h1 class="nombres">Cargando...</h1>
+        <p class="fecha">00/00/0000</p>
+        <button id="btnEntrar">Entrar</button>
+      </div>
+    </section>
+
+    <!-- Cuenta regresiva -->
+    <section class="cuenta-regresiva" id="cuentaRegresiva">
+      <div class="contenedor">
+        <h2>Faltan</h2>
+        <div class="reloj">
+          <div><span id="dias">00</span><small>días</small></div>
+          <div><span id="horas">00</span><small>hs</small></div>
+          <div><span id="minutos">00</span><small>min</small></div>
+          <div><span id="segundos">00</span><small>seg</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicatoria / mensaje inicial -->
+    <section class="mensaje-inicial" id="mensajeInicial">
+      <div class="contenedor">
+        <p id="mensajeDedicatoria"></p>
+      </div>
+    </section>
+
+    <!--Cards Ceremonia celebración-->
+
+    <section class="evento-cards">
+      <div class="card" id="cardCeremonia">
+        <img id="imgCeremonia" src="" alt="Imagen ceremonia" />
+        <h2 id="tituloCeremonia"></h2>
+        <h3>Día</h3>
+        <p id="fechaCeremonia"></p>
+        <a id="calendarCeremonia" class="boton" target="_blank">Agendar</a>
+        <h3>Lugar</h3>
+        <p id="lugarCeremonia"></p>
+        <a class="boton" id="rsvp1" target="_blank">Confirmar asistencia</a>
+        <h3>Dirección</h3>
+        <p id="direccionCeremonia"></p>
+        <a id="mapsCeremonia" class="boton" target="_blank">¿Cómo llegar?</a>
+      </div>
+
+      <div class="card" id="cardFiesta">
+        <img id="imgFiesta" src="" alt="Imagen fiesta" />
+        <h2 id="tituloFiesta"></h2>
+        <h3>Día</h3>
+        <p id="fechaFiesta"></p>
+        <a id="calendarFiesta" class="boton" target="_blank">Agendar</a>
+        <h3>Lugar</h3>
+        <p id="lugarFiesta"></p>
+        <a class="boton" id="rsvp2" target="_blank">Confirmar asistencia</a>
+        <h3>Dirección</h3>
+        <p id="direccionFiesta"></p>
+        <a id="mapsFiesta" class="boton" target="_blank">¿Cómo llegar?</a>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

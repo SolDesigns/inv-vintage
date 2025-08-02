@@ -1,0 +1,26 @@
+
+{
+  "nombres": "Lucía & Martín",
+  "fecha": "18 de Octubre de 2025",
+  "fechaEvento": "2025-10-18T20:00:00",
+  "mensaje": "Queremos compartir con vos un día muy especial...",
+  "ceremonia": {
+    "titulo": "Ceremonia",
+    "fecha": "2025-10-18T17:00:00",
+    "lugar": "Parroquia Nuestra Sra. Fátima",
+    "direccion": "Av. Los Álamos 1432 - CABA",
+    "imagen": "img/ceremonia.gif",
+    "calendarUrl": "https://calendar.google.com/ceremonia",
+    "mapsUrl": "https://maps.google.com/ceremonia"
+  },
+  "fiesta": {
+    "titulo": "Celebración",
+    "fecha": "2025-10-18T21:00:00",
+    "lugar": "Salón de Fiestas Matinal",
+    "direccion": "Av. Lozana 4251 - CABA",
+    "imagen": "img/fiesta.gif",
+    "calendarUrl": "https://calendar.google.com/fiesta",
+    "mapsUrl": "https://maps.google.com/fiesta"
+  },
+  "rsvpUrl": "https://formulario.com/asistencia"
+}
