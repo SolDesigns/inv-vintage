@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Invitación Digital</title>
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Optimización de carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fuentes Google: Fleur De Leah, Rochester y Philosopher -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Rochester&display=swap"
+      rel="stylesheet"
+    />
+
   </head>
   <body>
     <!-- Pantalla de bienvenida -->
@@ -12,7 +22,7 @@
       <div class="contenedor">
         <h1 class="nombres">Cargando...</h1>
         <p class="fecha">00/00/0000</p>
-        <button id="btnEntrar">Entrar</button>
+        <!--<button id="btnEntrar">Entrar</button>-->
       </div>
     </section>
 
@@ -40,7 +50,11 @@
 
     <section class="evento-cards">
       <div class="card" id="cardCeremonia">
-        <img id="imgCeremonia" src="" alt="Imagen ceremonia" />
+        <img
+          id="imgCeremonia"
+          src="assets/img/ceremonia.png"
+          alt="Imagen ceremonia"
+        />
         <h2 id="tituloCeremonia"></h2>
         <h3>Día</h3>
         <p id="fechaCeremonia"></p>
@@ -54,7 +68,7 @@
       </div>
 
       <div class="card" id="cardFiesta">
-        <img id="imgFiesta" src="" alt="Imagen fiesta" />
+        <img id="imgFiesta" src="assets/img/fiesta.png" alt="Imagen fiesta" />
         <h2 id="tituloFiesta"></h2>
         <h3>Día</h3>
         <p id="fechaFiesta"></p>
@@ -65,6 +79,24 @@
         <h3>Dirección</h3>
         <p id="direccionFiesta"></p>
         <a id="mapsFiesta" class="boton" target="_blank">¿Cómo llegar?</a>
+      </div>
+    </section>
+
+    <!--Fotos galería-->
+
+    <section class="galeria">
+      <div class="carousel">
+        <h1 id="tituloGaleria">Retratos de nuestra historia de amor</h1>
+        <div class="carousel-track">
+          <img src="assets/img/foto1.jpg" alt="Foto 1" />
+          <img src="assets/img/foto2.jpg" alt="Foto 2" />
+          <img src="assets/img/foto3.jpg" alt="Foto 3" />
+        </div>
+        <div class="carousel-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
       </div>
     </section>
 

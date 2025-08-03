@@ -2,11 +2,24 @@
 
 /* css/style.css */
 
+
+
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   background-color: #fefefe;
   color: #333;
+}
+
+:root {
+  /* Fuentes */
+  --fuente-decorativa: 'Fleur De Leah', cursive;
+  --fuente-titulos: 'Rochester', cursive;
+  --fuente-texto: 'Philosopher', sans-serif;
+
+  /* Colores */
+  --color-primario: #b48b6d;    
+  --color-secundario: #b39f8a;  /* Dorado suave */
 }
 
 /* =============================
@@ -21,20 +34,19 @@ body {
   background: url('../assets/img/fondo.jpg') no-repeat center center/cover;
 }
 
-.bienvenida .contenedor {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 2rem;
-  border-radius: 12px;
-}
 
 .bienvenida h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 0.5rem;
+  font-family: var(--fuente-decorativa);
+  color: #a46c5c
 }
 
 .bienvenida p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-family: var(--fuente-titulos);
+  color:white;
 }
 
 #btnEntrar {
@@ -58,15 +70,18 @@ body {
 }
 
 .cuenta-regresiva h2 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-family: var(--fuente-titulos);
+  color: var(--color-primario);
 }
 
 .reloj {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  margin: 0 20px;
 }
 
 .reloj div {
@@ -75,6 +90,13 @@ body {
   border-radius: 10px;
   min-width: 60px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.reloj > div {
+  flex: 1 1 auto;
+  min-width: 40px;
+  max-width: 60px;
+  text-align: center;
 }
 
 .reloj span {
@@ -98,13 +120,15 @@ body {
 }
 
 .mensaje-inicial p {
-  font-size: 1.1rem;
+  font-size: 2rem;
   line-height: 1.6;
-  color: #333;
+  color: #d08060;
   max-width: 600px;
   margin: 0 auto;
   font-style: italic;
   white-space: pre-line;
+  font-family: var(--fuente-titulos);
+
 }
 
 /* =============================
@@ -121,10 +145,13 @@ body {
 
 .card {
   background: #fef7f1;
-  padding: 1.5rem;
+  padding:  1.5rem 1.5rem 3rem;
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
+  max-width: 350px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
@@ -136,17 +163,25 @@ body {
 .card h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  font-family: var(--fuente-texto);
 }
 
 .card h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 1rem;
   color: #a46c5c;
+  font-family: var(--fuente-texto);
 }
 
 .card p {
   font-size: 1rem;
   margin: 0.25rem 0;
+  font-family: var(--fuente-texto);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .boton {
@@ -159,11 +194,98 @@ body {
   border-radius: 0.5rem;
   font-weight: bold;
   transition: background 0.3s;
+  font-family: var(--fuente-texto);
 }
 
 .boton:hover {
   background: #b5684e;
 }
+
+#imgCeremonia,
+#imgFiesta {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+/* =============================
+      GALERÍA DE FOTOS
+============================= */
+
+.carousel {
+  width: 100vw; /* para que el fondo ocupe toda la pantalla */
+  background: url('../assets/img/pattern1.jpg');
+  background-repeat: repeat;
+  background-size:200px;
+  padding: 2rem 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding: 0 1rem 1rem;
+  max-width: 90%; /* imágenes más chicas que el fondo */
+  box-sizing: border-box;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none; /* ocultar scroll en Chrome */
+}
+.carousel-track {
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.carousel-track img {
+  flex: 0 0 auto;
+  width: 280px;
+  height: 187px;
+  border-radius: 10px;
+  object-fit: cover;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #b48b6d;
+}
+
+#tituloGaleria{
+text-align: center;
+color: #181716;
+font-size: 2rem;
+margin: 2rem;
+font-weight: bold; 
+font-family: var(--fuente-titulos);
+}
+
+
 
 
 /* =============================
@@ -171,12 +293,14 @@ body {
 ============================= */
 
 @media (min-width: 768px) {
-  .bienvenida h1 {
-    font-size: 3rem;
-  }
+
+    .bienvenida h1 {
+  font-size: 5rem;
+}
 
   .bienvenida p {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 8rem;
   }
 
   #btnEntrar {
@@ -184,7 +308,7 @@ body {
   }
 
    .cuenta-regresiva h2 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
   .reloj div {
@@ -201,15 +325,30 @@ body {
   }
 
     .mensaje-inicial p {
-    font-size: 1.25rem;
+    font-size: 3rem;
   }
 
   .evento-cards {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
   }
 
   .card {
-    width: 45%;
+    margin: 1rem;
   }
+
+   .carousel-track {
+    max-width: 70%;
+    justify-content: center;
+  }
+
+  .carousel-track img {
+    width: 300px;
+    height: 200px;
+  }
+
+
 }
